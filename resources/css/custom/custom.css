@@ -1,0 +1,237 @@
+/*--------------------------------------------------------------------------*/
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Figtree', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgba(243, 244, 246, 1);
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+h1{
+    font-size: 36px;
+}
+
+
+/*--------------------------------------------------------------------------*/
+
+#calendar {
+    height: 550px !important;
+    width: 100%;
+    /* ancho al 100% del contenedor */
+    box-sizing: border-box;
+    /* para que el padding no afecte el ancho */
+}
+
+@media (min-width: 1150px) {
+    #calendar {
+        max-width: 100%;
+        /* para que no sobrepase el contenedor padre */
+    }
+}
+
+#calendar a {
+    color: black;
+}
+
+.fc-h-event {
+    background-color: #495057 !important;
+    border: 1px solid #495057 !important;
+}
+
+.fc-daygrid-event-dot {
+    border: calc(var(--fc-daygrid-event-dot-width)/2) solid #495057 !important;
+}
+
+
+/*--------------------------------------------------------------------------*/
+
+.page-link {
+    color: #495057;
+}
+
+.pagination {
+    --bs-pagination-active-bg: #495057 !important;
+    --bs-pagination-active-border-color: #495057 !important;
+}
+
+.td-limit {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal-header {
+    background-color: #e2e3e5;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: rgb(55, 65, 81, 1);
+    --bs-btn-border-color: rgb(55, 65, 81, 1);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: rgb(55, 65, 81, 1);
+    --bs-btn-hover-border-color: rgb(55, 65, 81, 1);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: rgb(55, 65, 81, 1);
+    --bs-btn-active-border-color: rgb(55, 65, 81, 1);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: rgb(55, 65, 81, 1);
+    --bs-btn-disabled-border-color: rgb(55, 65, 81, 1);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: rgb(55, 65, 81, 1);
+    --bs-btn-border-color: rgb(55, 65, 81, 1);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: rgb(55, 65, 81, 1);
+    --bs-btn-hover-border-color: rgb(55, 65, 81, 1);
+    --bs-btn-focus-shadow-rgb: 13, 110, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: rgb(55, 65, 81, 1);
+    --bs-btn-active-border-color: rgb(55, 65, 81, 1);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: rgb(55, 65, 81, 1);
+}
+
+.modal-content {
+    border: none !important;
+}
+
+
+/*-----------------------------------------------------------*/
+
+.contenidoMenu {
+    max-width: 250px;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.footer {
+    margin-left: 100px;
+}
+
+.menu {
+    transition: width 0.5s ease;
+    top: 0;
+    left: 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-wrapper .link-text {
+    margin-left: 0.5rem;
+    white-space: nowrap;
+}
+
+.menu-item .icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.bg-menu-gradient {
+    background: linear-gradient(135deg, rgba(55, 65, 81, 1) 0%, rgba(75, 85, 99, 1) 100%);
+    color: white;
+    /* Si quieres texto claro */
+}
+
+
+/* 768px - 1150px: barra estrecha con solo iconos */
+
+@media (max-width: 1150px) and (min-width: 768px) {
+    .contenidoMenu {
+        max-width: 100px;
+    }
+    .footer {
+        margin-left: 100px;
+    }
+    .menu {
+        text-align: center;
+    }
+    .menu .nav-link {
+        justify-content: center;
+        padding: 8px 0;
+        overflow: hidden;
+    }
+    .menu .nav-link i,
+    .menu .nav-link .icon {
+        margin-right: 0;
+    }
+    /* O mejor, para ocultar solo el texto, si no tienes un span para el texto, ocultamos todo excepto el icono */
+    .menu .nav-link {
+        color: white;
+    }
+    /* Esto es un truco para ocultar el texto dentro del enlace, asumiendo que el icono es solo el <i> o <span class="icon"> */
+    .menu .nav-link {
+        font-size: 0;
+        /* oculta texto */
+    }
+    .menu .nav-link i,
+    .menu .nav-link .icon {
+        font-size: 20px;
+        /* mantiene el tamaño iconos */
+    }
+}
+
+
+/* Para móviles (menos de 768px), sin max-width */
+
+@media (max-width: 767.98px) {
+    .contenidoMenu {
+        max-width: none;
+        top: auto;
+        height: auto;
+    }
+    .footer {
+        margin-left: none;
+    }
+}
+
+
+/*--------------------------------------------------------------------------*/
+
+.full-screen {
+        height: 90vh;          /* Ocupa toda la altura de la ventana */
+        width: 100vw;           /* Ocupa todo el ancho de la ventana */
+        display: flex;
+        justify-content: center; /* Centra horizontal */
+        align-items: center;     /* Centra vertical */
+        margin-top: 1.5rem;      /* Lo que hace la clase mt-4 en Bootstrap (aprox 1.5rem) */
+    }
+
+/*--------------------------------------------------------------------------*/
+.enlace {
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1)) !important;
+}
+
+.enlace:hover {
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1)) !important;
+    text-decoration: underline !important;
+}
