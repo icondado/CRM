@@ -1,4 +1,5 @@
 # CRM - Sistema de Gestión Interna
+**BK Programación** | Proyecto desarrollado por: **Irene Condado Alcantarilla**
 
 ## DESCRIPCIÓN GENERAL
 
