@@ -118,4 +118,4 @@ El usuario regular tiene un panel simplificado con las siguientes pestañas:
 
 Este sistema fue diseñado para uso interno de una organización, permitiendo una gestión sencilla y segura de recursos, usuarios y contenido con control de roles.
 
-Autora: Irene Condado Alcantarilla
+---
